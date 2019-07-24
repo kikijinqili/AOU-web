@@ -15,24 +15,29 @@
 
   <!-- Button Delay -->
   <script type="text/javascript">
+    function showButton() {
+      document.getElementById("confirm-btn").style.visibility = "visible";
+    }
 
-        function showButton()
-        {
-            document.getElementById("confirm-btn").style.visibility = "visible";
-        }
+    function hideButton() {
+      document.getElementById("confirm-btn").style.visibility = "hidden";
+    }
 
-        function hideButton()
-        {
-            document.getElementById("confirm-btn").style.visibility = "hidden";
-        }
+    window.onload = function() {
+      hideButton();
+      setTimeout('showButton()', 2000);
+    }
+  </script>
 
-        window.onload = function()
-        {
-            hideButton();
-            setTimeout('showButton()', 2000);
-        }
-
-    </script>
+  <script type="text/javascript">
+    function preventBack() {
+      window.history.forward();
+    }
+    setTimeout("preventBack()", 0);
+    window.onunload = function() {
+      null
+    };
+  </script>
 
 </head>
 
@@ -55,24 +60,21 @@
   <!-- Checkbox -->
   <form>
 
-  <p class="question-label">Q2: Is Precision Medicine the same as the current method of health care?</p>
+    <p class="question-label">Q2: Is Precision Medicine the same as the current method of health care?</p>
 
-  <div class="checkbox-group">
+    <div class="checkbox-group">
 
-    <input type="radio" id="answer-A"
-           name="Q2-answer" value="2-A" class="Q2 checkbox-input">
-    <label class="answer-label" for="answer-A">Yes.</label>
-    <br>
-    <input type="radio" id="answer-B"
-           name="Q2-answer" value="2-B" class="Q2 checkbox-input">
-    <label class="answer-label" for="answer-B">No.</label>
+      <input type="radio" id="answer-A" name="Q2-answer" value="2-A" class="Q2 checkbox-input">
+      <label class="answer-label" for="answer-A">Yes.</label>
+      <br>
+      <input type="radio" id="answer-B" name="Q2-answer" value="2-B" class="Q2 checkbox-input">
+      <label class="answer-label" for="answer-B">No.</label>
 
-  </div>
+    </div>
 
-  <!-- Continue Button -->
-  <div>
-    <input id="confirm-btn" type="button submit" class="btn btn-lg submit-btn" value="confirm"
-    onClick="javascript:
+    <!-- Continue Button -->
+    <div>
+      <input id="confirm-btn" type="button submit" class="btn btn-lg submit-btn" value="confirm" onClick="javascript:
     var rates = document.getElementsByClassName('Q2');
     var radio_value;
     for(var i = 0; i < rates.length; i++){
@@ -82,21 +84,21 @@
                 window.open(radio_value + '.html', '_self');
         }
     };">
-  </div>
+    </div>
 
-</form>
+  </form>
 
-<!-- <pre id="log">
+  <!-- <pre id="log">
 </pre> -->
 
 
 
-<!-- Script -->
-<script src="js/log.js"></script>
+  <!-- Script -->
+  <script src="js/log.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
