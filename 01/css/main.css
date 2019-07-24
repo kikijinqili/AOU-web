@@ -112,7 +112,7 @@ body {
 .btn {
   background: #191644;
   color: white;
-  padding: 1.2rem 1.5rem 0.8rem 1.5rem;
+  padding: 1rem 1.5rem 0.8rem 1.5rem;
   margin: 1rem 1rem 1rem 160px;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -325,8 +325,6 @@ input.checkbox-input:checked {
 /* Content */
 main {
   opacity: 0;
-  padding: 1rem 2rem;
-  font-family: 'Avenir Next', sans-serif;
 }
 
 /* Quickly loaded states */
