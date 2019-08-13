@@ -242,13 +242,13 @@ input.checkbox-input:checked {
 
 /* Popup Window */
 .modal-body {
-  padding: 0;
+  padding: 2rem!important;
 }
 
 .modal-text {
   margin: 0 auto 0;
   font-family: "Gotham-Book";
-  width: 80%;
+  width: 82%;
   font-size: 0.7em;
   z-index: 2;
   position: relative;
