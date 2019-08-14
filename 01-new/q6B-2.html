@@ -13,28 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- Button Delay -->
-  <script type="text/javascript">
-  function showButton() {
-    var btns = document.getElementsByClassName("modal-btn");
-    for(var i = 0; i < btns.length; i++) {
-        btns[i].style.visibility = "visible";
-    }
-  }
 
-  function hideButton() {
-    var btns = document.getElementsByClassName("modal-btn");
-    for(var i = 0; i < btns.length; i++) {
-        btns[i].style.visibility = "hidden";
-    }
-  }
-
-  window.onload = function() {
-    hideButton();
-      setTimeout('showButton()', 12000);
-
-  }
-  </script>
 
   <script type="text/javascript">
     function preventBack() {
@@ -84,22 +63,7 @@
 
       <div>
       <input value="confirm" id="confirm-btn" type="button submit" class="runButton btn btn-lg submit-btn"
-      onClick="javascript:
-      var rates = document.getElementsByClassName('Q6b-2');
-      var radio_value;
-      for(var i = 0; i < rates.length; i++){
-          if(rates[i].checked){
-              radio_value = rates[i].value.toString();
-                  console.log(radio_value);
-                  if(radio_value == '6-C') {
-                    $('#6-C').modal('show');
-                  }
-                  else if(radio_value == '6-D') {
-                    $('#6-D').modal('show');
-                  }
-
-          }
-        };">
+      onClick="javascript: clickQ6b2();">
       </div>
 
     <div class="modal fade" id="6-C" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

@@ -14,31 +14,7 @@
   <link rel="stylesheet" href="css/main.css">
 
   <!-- Button Delay -->
-  <script type="text/javascript">
-    function showButton() {
-      // document.getElementById("confirm-btn").style.visibility = "visible";
-      var btns = document.getElementsByClassName("modal-btn");
-      for(var i = 0; i < btns.length; i++) {
-          btns[i].style.visibility = "visible";
-      }
-      // document.getElementsByClassName("modal-btn").style.visibility = "visible";
-    }
 
-    function hideButton() {
-      // document.getElementById("confirm-btn").style.visibility = "hidden";
-      var btns = document.getElementsByClassName("modal-btn");
-      for(var i = 0; i < btns.length; i++) {
-          btns[i].style.visibility = "hidden";
-      }
-      // document.getElementsByClassName("modal-btn").style.visibility = "hidden";
-    }
-
-    window.onload = function() {
-      hideButton();
-        setTimeout('showButton()', 12000);
-
-    }
-  </script>
 
   <script type="text/javascript">
     function preventBack() {
@@ -50,6 +26,7 @@
     };
   </script>
 
+<script src="js/log.js"></script>
 
 </head>
 
@@ -91,22 +68,7 @@
 
       <div>
       <input value="confirm" id="confirm-btn" type="button submit" class="runButton btn btn-lg submit-btn"
-      onClick="javascript:
-      var rates = document.getElementsByClassName('Q1');
-      var radio_value;
-      for(var i = 0; i < rates.length; i++){
-          if(rates[i].checked){
-              radio_value = rates[i].value.toString();
-                  console.log(radio_value);
-                  if(radio_value == '1-A') {
-                    $('#1-A').modal('show');
-                  }
-                  else if(radio_value == '1-B') {
-                    $('#1-B').modal('show');
-                  }
-
-          }
-        };">
+      onClick="javascript: clickQ1();">
       </div>
 
     <div class="modal fade" id="1-A" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
