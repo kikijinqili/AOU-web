@@ -180,15 +180,38 @@ p#first-p {
   font-size: 0.7em;
 }
 
+.q1-group {
+  margin-left: 20%;
+}
+
+.answer-label {
+  display: inline-block;
+}
+
 @media (max-width: 1200px) {
   div.checkbox-group {
     margin-left: 20%;
   }
+  label.q1-answer {
+    width: 80%;
+  }
+  input.q1-check {
+    top: 0;
+    margin-bottom: 2rem;
+  }
 }
+
 
 @media (max-width: 720px) {
   div.checkbox-group {
     margin-left: 10%;
+  }
+  label.q1-answer {
+    width: 80%;
+  }
+  input.q1-check {
+    top: 0;
+    margin-bottom: 2rem;
   }
 }
 
