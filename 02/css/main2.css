@@ -356,3 +356,19 @@ input.checkbox-input:checked {
   padding-bottom: 5rem;
   line-height: 1.5;
 }
+
+/* Intro */
+.qna-intro {
+  margin: 3rem auto 0;
+  width: 80%;
+}
+
+h4.qna-introtext {
+  list-style-type: none;
+  margin: 0px;
+  font-family: "Gotham-Book";
+  font-size: 0.8em;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  line-height: 1.5;
+}
