@@ -51,10 +51,10 @@
 
     <div class="checkbox-group">
 
-      <input type="radio" id="answer-A" name="Q4-answer" value="4-1-A" class="Q4 checkbox-input" style="margin-left: 10%;">
+      <input type="radio" id="answer-A" name="Q4-answer" value="q4A-2" class="Q4 checkbox-input" style="margin-left: 10%;">
       <label class="answer-label" for="answer-A">Good.</label>
       <br>
-      <input type="radio" id="answer-B" name="Q4-answer" value="4-1-B" class="Q4 checkbox-input" style="margin-left: 10%;">
+      <input type="radio" id="answer-B" name="Q4-answer" value="q4B-2" class="Q4 checkbox-input" style="margin-left: 10%;">
       <label class="answer-label" for="answer-B">Not so good.</label>
 
 
@@ -63,7 +63,15 @@
     <!-- Continue Button -->
     <div>
       <input id="confirm-btn" type="button submit" class="btn btn-lg submit-btn" value="confirm" onClick="javascript:
-                window.open('q4A-2.html', '_self');">
+      var rates = document.getElementsByClassName('Q4');
+      var radio_value;
+      for(var i = 0; i < rates.length; i++){
+          if(rates[i].checked){
+              radio_value = rates[i].value;
+                  console.log(radio_value);
+                  window.open(radio_value + '.html', '_self');
+          }
+      };">
     </div>
 
   </form>

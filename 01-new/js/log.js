@@ -177,9 +177,9 @@ function clickQ3() {
 
 }
 
-function clickQ43() {
+function clickQ4A3() {
 
-  var rates = document.getElementsByClassName('Q4-3');
+  var rates = document.getElementsByClassName('Q4A-3');
   var radio_value;
 
   for (var i = 0; i < rates.length; i++) {
@@ -202,6 +202,52 @@ function clickQ43() {
 
         $('#4-C').data('bs.modal', null);
         $('#4-C').modal({
+          show: true,
+          backdrop: 'static',
+          keyboard: false
+        });
+      }
+
+    }
+  }
+
+}
+
+function clickQ4B3() {
+
+  var rates = document.getElementsByClassName('Q4B-3');
+  var radio_value;
+
+  for (var i = 0; i < rates.length; i++) {
+    if (rates[i].checked) {
+      radio_value = rates[i].value.toString();
+      console.log(radio_value);
+      if (radio_value == '4-B') {
+        hideButton();
+        setTimeout('showButton()', 5000);
+
+        $('#4-B').data('bs.modal', null);
+        $('#4-B').modal({
+          show: true,
+          backdrop: 'static',
+          keyboard: false
+        });
+      } else if (radio_value == '4-C') {
+        hideButton();
+        setTimeout('showButton()', 5000);
+
+        $('#4-C').data('bs.modal', null);
+        $('#4-C').modal({
+          show: true,
+          backdrop: 'static',
+          keyboard: false
+        });
+      } else if (radio_value == '4-F') {
+        hideButton();
+        setTimeout('showButton()', 5000);
+
+        $('#4-F').data('bs.modal', null);
+        $('#4-F').modal({
           show: true,
           backdrop: 'static',
           keyboard: false
@@ -258,8 +304,8 @@ function clickQ4a2() {
       if(rates[i].checked){
           radio_value = rates[i].value.toString();
               console.log(radio_value);
-              if(radio_value == 'q4-3') {
-                window.open('q4-3.html', '_self');
+              if(radio_value == 'q4A-3') {
+                window.open('q4A-3.html', '_self');
               }
               else if(radio_value == '4-A') {
                 hideButton();
