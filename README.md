@@ -1,2 +1,2 @@
 # AOU-web
-### [AOU Survey](https://joinallofus.info/)
+### [AllOfUs Survey](https://joinallofus.info/)
